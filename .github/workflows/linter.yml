@@ -10,12 +10,8 @@ on:
 
 jobs:
   flake8:
-    name: Jupyter Linter
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Code
-      uses: actions/checkout@v2
-
-    - name: Linter Jupyter Notebook
-      uses: mhitza/flake8-jupyter-notebook@v1
+      - uses: actions/checkout@v2
+      - uses: mhitza/flake8-jupyter-notebook@v1
