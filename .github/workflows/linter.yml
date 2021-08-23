@@ -1,7 +1,21 @@
+name: Jupyter Linter
+
+on:
+  push:
+    # branches-ignore: [master, main]
+    # Remove the line above to run when pushing to master
+  pull_request:
+    branches: [master, main]
+
+
 jobs:
   flake8:
+    name: Jupyter Linter
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - uses: mhitza/flake8-jupyter-notebook@v1
+    - name: Checkout Code
+      uses: actions/checkout@v2
+
+    - name: Linter Jupyter Notebook
+      uses: mhitza/flake8-jupyter-notebook@v1
