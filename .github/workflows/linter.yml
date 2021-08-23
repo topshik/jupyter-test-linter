@@ -14,6 +14,8 @@ jobs:
 
     steps:
       - run: echo "fig1"
-      - uses: actions/checkout@v2
+      - name: Checkout files
+        uses: actions/checkout@v2
       - run: echo: "fig2"
-      - uses: mhitza/flake8-jupyter-notebook@v1
+      - name: Run flake8-jupyter linter
+        uses: mhitza/flake8-jupyter-notebook@v1
